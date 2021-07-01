@@ -1,7 +1,7 @@
 ---
 - name: Transfer and execute a script.
   hosts: all
-  user: ec2-user
+  remote_user: ec2-user
   sudo: yes
   tasks:
      - name: Transfer the script
