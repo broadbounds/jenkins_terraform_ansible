@@ -18,7 +18,7 @@ sudo sed -i "s/us-east-1/$aws_region/g" Dockerfile
 sudo cp config.json.demo config.json
 sudo sed -i "s/123456789012/$aws_account_id/g" config.json
 sudo sed -i "s/demo/$aws_account_name/g" config.json
-sudo public_ip=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
+public_ip=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
 sudo echo "CloudMapper can be accessed at $public_ip on port 8000"
 sudo echo "Report details can be accessed on /account-data/report.html"
 sudo docker build -t cloudmapper .
