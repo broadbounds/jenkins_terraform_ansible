@@ -251,9 +251,9 @@ resource "aws_eip_association" "bastion_eip_association" {
 
 # We save our bastion host public ip in our inventory.ini file.
 resource "local_file" "ip_addresses" {
-  content = <<EOF
-            [Bastion_CloudMapper_Server]
-            ${aws_eip.bastion_elastic_ip.public_ip} 
+  content = <<EOF 
+[Bastion_CloudMapper_Server]
+${aws_eip.bastion_elastic_ip.public_ip} 
   EOF
   filename = "${var.key_path}inventory.ini"
 }
