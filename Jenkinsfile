@@ -59,7 +59,7 @@ pipeline {
                 unstash "terraform-plan"
                 sh "terraform apply terraform.tfplan"
                 sh "cat /var/lib/jenkins/.ssh/inventory.ini"
-                sh "ansible-playbook -i /var/lib/jenkins/.ssh/inventory.ini playbook.yml"
+                sh "ansible-playbook -i /var/lib/jenkins/.ssh/inventory.ini playbook.yml --user ec2-user --key-file /var/lib/jenkins/.ssh/ssh_private_key.pem"
             }
         }
     }
