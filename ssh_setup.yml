@@ -1,6 +1,5 @@
 ---
 # Add all the hosts from your ansible inventory to your .ssh/known_hosts
-# Also use ssh-copy-id to add public key to the hosts
 
 - name: Store known hosts of 'all' the hosts in the inventory file
   hosts: localhost
