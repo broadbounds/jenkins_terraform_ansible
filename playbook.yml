@@ -1,11 +1,5 @@
 ---
-- name: SSH key exchange.
-  hosts: localhost
-  connection: local
-  tasks:
-    - name: Run ssh_setup playbook
-      include_tasks: ssh_setup.yml
-
+- import_playbook: ssh_setup.yml
 
 - name: Transfer and execute a script.
   hosts: all
