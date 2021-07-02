@@ -3,8 +3,7 @@
 # Also use ssh-copy-id to add public key to the hosts
 
 - name: Store known hosts of 'all' the hosts in the inventory file
-  hosts: localhost
-  connection: local
+
   vars:
     ssh_known_hosts_command: "ssh-keyscan -T 10"
     ssh_known_hosts_file: "/var/lib/jenkins/.ssh/known_hosts"
