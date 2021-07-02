@@ -6,7 +6,7 @@ aws_region=${aws_region}
 ACCESS_KEY=${cloudmapper_access_key}
 SECRET_KEY=${cloudmapper_secret_key}
 
-
+yum update -y
 yum install docker -y
 yum -y install git
 systemctl restart docker
