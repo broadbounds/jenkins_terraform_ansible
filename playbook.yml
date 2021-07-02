@@ -2,7 +2,7 @@
 - name: Transfer and execute a script.
   hosts: all
   remote_user: ec2-user
-  sudo: yes
+  become: true
   tasks:
      - name: Transfer the script
        copy: src=cloudmapper_script.sh dest=/home/ec2-user mode=0777
